@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-2</title>
+    <style>
+        html,body{
+            height : 100%;
+            width: 100%;
+            margin: 0;
+            padding : 0;
+        }
+        body{
+            margin:3px;
+        }
+
+        h1{
+            margin-top: 5px;
+            padding-top: 5px;
+        }
+        header{
+            margin: 0;
+            height : 80px;
+            text-align: center;
+            word-spacing: 30px ;
+            background-color:darkcyan;
+            color:whitesmoke
+        }
+        nav{
+            background-color:darkmagenta;
+            height:30%
+        }
+        a{
+            text-decoration: none;
+            color:whitesmoke;
+        }
+        a:hover{
+            color: black;
+        }
+        main{
+            height:400px;
+            background-color:#C2CAD0;
+            padding-top: 4px;
+        }
+        .container{
+            display: flex;
+            height :95%;
+            margin:8px;
+        }
+        .box{
+            padding:5px;
+            margin:10px;
+            width : 33%;
+            border: 1px solid black;
+            border-radius: 5%;
+        }
+        #box1{
+            background-color:lightpink;
+        }
+        #box2{
+            background-color: lightblue;
+        }
+        #box3{
+            background-color:antiquewhite;
+        }
+        footer{
+            background-color: darkcyan;
+            height: 60px;
+            display : flex;
+            flex-direction : column;
+            justify-content: center;
+            align-items: center;
+        }
+        .foot{
+            margin:0;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Courses</a>
+            <a href="#">Images</a>
+            <a href="#">AboutUs</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+      <div class = "container">
+        <div class="box" id="box1">box1</div>
+        <div class="box" id = "box2">Box2</div>
+        <div class="box" id = "box3">box3</div>
+      </div>
+    </main>
+    <footer>
+        <p class = "foot">Name: Epuri Sai Vyshnavi</p>
+        <p class = "foot">Contact No: 2342543634</p>
+    </footer>
+</body>
+</html>
