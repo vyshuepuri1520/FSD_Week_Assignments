@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <li><strong>Population:</strong> ${country.population.toLocaleString()}</li>
             <li><strong>Area:</strong> ${country.area.toLocaleString()} square kilometers</li>
             <li><strong>Languages:</strong> ${Object.values(country.languages).join(", ")}</li>
-            <li><strong>Currency:</strong> ${country.currency}</li>
+            <li><strong>Currency:</strong> ${Object.values(country.currencies)[0].symbol}</li>
+            <img src="${country.flags[0]}" alt="${country.name.common}" width="150">
           </ul>
         `;
   

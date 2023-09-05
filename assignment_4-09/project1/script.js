@@ -1,13 +1,12 @@
 const apiKey = '5c44109fb38043e3d802c384091bd66d';
 
-const cities = ['New York', 'London', 'Paris', 'Tokyo', 'Sydney', 'Berlin', 'Rome', 'Los Angeles', 'Beijing', 'Rio de Janeiro','India'];
+const cities = ['New York', 'London', 'Paris', 'Tokyo', 'Sydney', 'Berlin', 'Rome', 'Los Angeles', 'India',, 'Rio de Janeiro'];
 
 async function getWeatherData() {
   try {
     const randomCity = cities[Math.floor(Math.random() * cities.length)];
 
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${randomCity}&appid=${apiKey}&units=metric`);
-
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
@@ -26,17 +25,21 @@ function updateWeatherInfo(data) {
   weatherContainer.innerHTML = ''; // Clear previous content
 
   const cityName = document.createElement('h2');
-  cityName.textContent = data.name;
+  cityName.innerHTML = data.name;
 
   const temperature = document.createElement('p');
-  temperature.textContent = `Temperature: ${data.main.temp}°C`;
+  temperature.innerHTML = `Temperature: ${data.main.temp}°C`;
 
   const description = document.createElement('p');
-  description.textContent = `Description: ${data.weather[0].description}`;
+  description.innerHTML = `Description: ${data.weather[0].description}`;
+
+  const windSpeed = document.createElement('p');
+  windSpeed.innerHTML = `Wind Speed: ${data.wind.speed}`;
 
   weatherContainer.appendChild(cityName);
   weatherContainer.appendChild(temperature);
   weatherContainer.appendChild(description);
+  weatherContainer.appendChild(windSpeed);
 }
 
 window.addEventListener('load', getWeatherData);
