@@ -22,7 +22,7 @@ async function getWeatherData() {
 
 function updateWeatherInfo(data) {
   const weatherContainer = document.querySelector('.weather-data');
-  weatherContainer.innerHTML = ''; // Clear previous content
+  weatherContainer.innerHTML = ''; 
 
   const cityName = document.createElement('h2');
   cityName.innerHTML = data.name;
